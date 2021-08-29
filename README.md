@@ -19,6 +19,8 @@
 - Strong paramaterのrequireがない、imageに_idが付与されている
  > params.require(:list).permit(:title, :body, :image)とすれば良い
 
+## 6.新規登録後のurlがおかしい
+- 
 ## 6.indexで削除できない
 - method: :delete
  > method: :deleteをlinkに付与する
@@ -26,3 +28,10 @@
 - local: trueの書き忘れ
  > form_withにlocal: trueの追加をする
 
+## 8.updateでエラーはく
+- 引数の(list_params)がない
+ > list.update(list_params)にすれば良い
+
+## 9.destroyの後に思った先にpathがいかない
+- パスの遷移してがおかしい
+ > todolists_path 
