@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+app/controller/todolists_controller
+-1行目クラスの名前を変更
+-Strong paramaterのrequireを削除、imageに_idを追加
+
+app/models/list.rb
+-attachmentのimageに_idを
