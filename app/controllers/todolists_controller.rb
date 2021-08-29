@@ -14,7 +14,7 @@ class TdolistsController < ApplicationController
   end
   
   def index
-    @lists_all = List.all
+    @lists = List.all
     @list = List.new
   end
   
