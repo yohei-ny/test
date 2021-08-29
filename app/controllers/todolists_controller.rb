@@ -1,4 +1,4 @@
-class TodolistsController < ApplicationController
+class TdolistsController < ApplicationController
   def new
   # Viewへ渡すためのインスタンス変数に空のモデルオブジェクトを生成する。
   @list = List.new
@@ -16,7 +16,6 @@ class TodolistsController < ApplicationController
   def index
     @lists_all = List.all
     @list = List.new
-  
   end
   
   def show
@@ -42,7 +41,7 @@ class TodolistsController < ApplicationController
   private
   # ストロングパラメータ
   def list_params
-    params.require(:list).permit(:title, :body, :image)
+    params.permit(:title, :body, :image_id)
   end
   
 end
