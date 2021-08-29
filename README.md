@@ -20,10 +20,13 @@
  > params.require(:list).permit(:title, :body, :image)とすれば良い
 
 ## 6.新規登録後のurlがおかしい
-- 
+- urlにtodolist.idとなっている
+ >todolists_path(list.id)の引数を消す
+
 ## 6.indexで削除できない
 - method: :delete
  > method: :deleteをlinkに付与する
+ 
 ## 7.newの投稿でリロードしないと反映されない
 - local: trueの書き忘れ
  > form_withにlocal: trueの追加をする
@@ -34,4 +37,4 @@
 
 ## 9.destroyの後に思った先にpathがいかない
 - パスの遷移してがおかしい
- > todolists_path 
+ > todolists_path に変更する
