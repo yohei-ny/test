@@ -35,3 +35,4 @@ app/views/todolists/new.html.erb
 
 db/migrate/20210723060706_add_name_to_lists.rb 
 -versionを変更
+
