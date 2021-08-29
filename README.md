@@ -9,3 +9,11 @@
 
 ## 3.indexで一覧画面が出ない
 - 変数が違うため→@listが@listになっている
+
+
+## 4. app/controller/todolists_controller
+- 1行目クラスの名前を変更
+- Strong paramaterのrequireを削除、imageに_idを追加
+
+## 5.app/models/list.rb
+- attachmentのimageに_idを
