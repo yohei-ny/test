@@ -22,9 +22,7 @@
 ## 6.indexで削除できない
 - method: :delete
  > method: :deleteをlinkに付与する
-
-
-app/views/todolists/index.html.erb
--loaal: trueを削除
-
+## 7.newの投稿でリロードしないと反映されない
+- local: trueの書き忘れ
+ > form_withにlocal: trueの追加をする
 
