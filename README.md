@@ -1,24 +1,11 @@
-# README
+# デバック内容
+## 1.投稿できない
+- post 'todolists' => 'todolists#create'
+ > 上記の記述がconfigにない
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 2.indexで削除できない
+- method: :delete
+ > 上記の記述がlinkに含まれていない
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 3.indexで一覧画面が出ない
+- 変数が違うため→@listが@listになっている
