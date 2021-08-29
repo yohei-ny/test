@@ -21,3 +21,10 @@
 - method: :delete
  > method: :deleteをlinkに付与する
 
+
+app/views/todolists/index.html.erb
+-loaal: trueを削除
+
+db/migrate/20210723060706_add_name_to_lists.rb
+-versionを
+>>>>>>> 294a6e39004e73f41bdf887939c9c9c71f6b3c82
