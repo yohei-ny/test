@@ -1,19 +1,23 @@
 # デバック内容
-## 1.投稿できない
-- post 'todolists' => 'todolists#create'
- > 上記の記述がconfigにない
 
-## 2.indexで削除できない
+
+## 1.indexで表示されない
+- 1行目クラスの名前がおかしい
+ > TdolistsController→TodolistsControllerにする
+
+## 2.アタッチメントでエラーが吐く
+- app/models/list.rbにattachmentのimageに_idがある
+ > app/models/list.rbにattachmentのimage_idの_idを消す
+
+## 3.createアクションに遷移ができない
+- config/routes.rbにcreateアクションがない
+ > post 'todolists' => 'todolists#create'を追加
+
+## 4.新規投稿ができない
+- Strong paramaterのrequireがない、imageに_idが付与されている
+ > params.require(:list).permit(:title, :body, :image)とすれば良い
+
+## 5.indexで削除できない
 - method: :delete
- > 上記の記述がlinkに含まれていない
+ > method: :deleteをlinkに付与する
 
-## 3.indexで一覧画面が出ない
-- 変数が違うため→@listが@listになっている
-
-
-## 4. app/controller/todolists_controller
-- 1行目クラスの名前を変更
-- Strong paramaterのrequireを削除、imageに_idを追加
-
-## 5.app/models/list.rb
-- attachmentのimageに_idを
