@@ -1,25 +1,24 @@
 <h2>New List</h2>
 <%= form_with model: @list, url:'/todolists', local:true do |f| %>
-<h4>タイトル</h4>
-<%= f.text_field :title %>
-<h4>本文</h4>
-<%= f.text_area :body %>
-<h4>画像</h4>
-<%= f.attachment_field :image %>
-
+  <h4>タイトル</h4>
+  <%= f.text_field :title %>
+  <h4>本文</h4>
+  <%= f.text_area :body %>
+  <h4>画像</h4>
+  <%= f.attachment_field :image %>
 <%= f.submit '投稿' %>
 <% end %>
 
 <div class="clearfix">
-<h2>All Lists</h2>
-<% @lists.each do |list| %>
-  <div class="list-box">
-    <%= attachment_image_tag list, :image,  size: "200x200", format: 'jpeg' %>
-    <div class="list-comment">
-      <span class="list-body"><%= list.body %></span>
-      <span class="list-title"><%=link_to list.title, todolist_path(list.id) %></span>
+  <h2>All Lists</h2>
+  <% @lists.each do |list| %>
+    <div class="list-box">
+      <%= attachment_image_tag list, :image,  size: "200x200", format: 'jpeg' %>
+      <div class="list-comment">
+        <span class="list-body"><%= list.body %></span>
+        <span class="list-title"><%=link_to list.title, todolist_path(list.id) %></span>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 </div>
 
