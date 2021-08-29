@@ -29,3 +29,9 @@ app/controller/todolists_controller
 
 app/models/list.rb
 -attachmentのimageに_idを
+
+app/views/todolists/index.html.erb
+-loaal: trueを削除
+
+db/migrate/20210723060706_add_name_to_lists.rb
+-versionを
